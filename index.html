@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Table</title>
+
+    <!-- fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: sans-serif;
+    }
+
+    :root {
+        --blue-color: #162950;
+        --white-color: #ffffff;
+        --black-color: #000000;
+        --border-color: #80808021;
+        --background-1: #F3F3F3;
+        --background-2: #e6e6e6;
+    }
+
+    /* Tables start */
+
+
+    /* container */
+    .t-container {
+        width: 70%;
+        margin: auto;
+    }
+
+
+    /* table */
+    .t-container table {
+        width: 100%;
+        background-color: var(--background-1);
+        border-collapse: collapse;
+        text-align: center;
+        border: 1px solid var(--border-color);
+        margin: 50px auto;
+    }
+
+    .t-container tr {
+        width: 100%;
+        display: flex;
+    }
+
+    .t-container table th,
+    td {
+        flex-basis: 34%;
+        padding: 20px;
+        display: block;
+        border: 1px solid var(--border-color);
+    }
+
+    .t-container table th {
+        padding-top: 0px;
+    }
+
+    /* thead */
+    .t-container thead {
+        background-color: var(--background-2);
+        text-transform: capitalize;
+    }
+
+    .t-container thead th:nth-child(1) {
+        background-color: var(--blue-color);
+        color: var(--white-color);
+        text-align: right;
+    }
+
+    .t-container thead th:nth-child(1) .imgcanvas {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .t-container thead th:nth-child(1) .imgcanvas img {
+        width: 100px;
+        height: 60px;
+    }
+
+    .t-container thead th:nth-child(2) {
+        padding-top: 30px;
+    }
+
+    .t-container thead th:nth-child(2) img {
+        width: 150px;
+        height: 50px;
+    }
+
+    .t-container thead th:nth-child(3) h3 {
+        font-size: 1.4rem;
+        padding-top: 40px;
+        font-weight: lighter;
+    }
+
+
+    /* tbody */
+
+    .t-container tbody td:first-child {
+        background-color: var(--background-2);
+    }
+
+    .t-container tbody .row1 {
+        height: 150px;
+    }
+
+    .t-container tbody .row1 td:nth-child(1) p {
+        letter-spacing: 1px;
+        line-height: 20px;
+        font-weight: lighter;
+    }
+
+    .t-container tbody .row1 td:nth-child(2) .mainimgs,
+    td:nth-child(3) .mainimgs {
+        position: relative;
+        display: block;
+        max-width: 180px;
+        margin: auto;
+        height: 180px;
+        top: -70px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 4px solid lightgrey;
+    }
+
+    .t-container tbody td:first-child {
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .t-container tbody td::first-letter {
+        text-transform: uppercase;
+    }
+
+    .t-container tbody td i {
+        font-size: 1.6rem;
+    }
+
+    .t-container tbody td .fa-check {
+        color: green;
+    }
+
+    .t-container tbody td .fa-xmark {
+        color: red;
+    }
+
+    /* round circle images */
+
+    .t-container tbody .canvastable td:nth-child(2) .mainimgs {
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Canva_Competitor.webp?v=1693405875);
+    }
+
+    .t-container tbody .canvastable td:nth-child(3) .mainimgs {
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Artyroom_Canvas.webp?v=1693405875);
+    }
+
+    .t-container tbody .colortable td:nth-child(2) .mainimgs {
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Colors_Competitors.webp?v=1693405874);
+    }
+
+    .t-container tbody .colortable td:nth-child(3) .mainimgs {
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Artyroom_Colors.webp?v=1693405875);
+    }
+
+    .t-container tbody .brushtable td:nth-child(2) .mainimgs {
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Brushes_Competitor.webp?v=1693405875);
+    }
+
+    .t-container tbody .brushtable td:nth-child(3) .mainimgs {
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Artyroom_Brushes.webp?v=1693405874);
+    }
+
+    /* Responsive Screens */
+
+    /* laptop screen */
+    @media screen and (max-width:1150px) {
+
+        /* conatiner   */
+        .t-container {
+            width: 90%;
+        }
+    }
+
+    /* Tablet screen */
+
+    @media screen and (max-width:800px) {
+
+        /* conatiner   */
+        .t-container {
+            width: 80%;
+        }
+
+        /* table   */
+        .t-container table {
+            border: none;
+        }
+
+        .t-container table th:first-child,
+        td:first-child {
+            flex-basis: 100%;
+            text-align: center !important;
+        }
+
+        .t-container table td:nth-child(even) {
+            border-right: 1px solid var(--border-color);
+        }
+
+        .t-container table th,
+        td {
+            flex-basis: 50%;
+            border: none;
+        }
+
+        .t-container tr {
+            flex-wrap: wrap;
+        }
+
+
+        /* thead */
+        .t-container thead {
+            background-color: var(--background-1);
+        }
+
+        .t-container thead th {
+            border: none;
+            padding: 0;
+        }
+
+
+        .t-container thead th:nth-child(1) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: left;
+            padding: 10px 20px;
+        }
+
+        .t-container thead th:nth-child(1) .imgcanvas {
+            flex-basis: 5%;
+            height: auto;
+        }
+
+        .t-container thead th:nth-child(1) .imgcanvas img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .t-container thead th:nth-child(1) h2 {
+            flex-basis: 85%;
+        }
+
+
+        /* tbody */
+        .t-container tbody .row1 td:nth-child(1) p {
+            text-align: center;
+            width: 70%;
+            margin: auto;
+        }
+
+        .t-container tbody .row1 td {
+            border: none;
+        }
+
+        .t-container tbody .row1 td:nth-child(1) {
+            background-color: var(--background-1);
+        }
+
+        .t-container tbody .row1 {
+            height: auto;
+            flex-wrap: wrap-reverse;
+        }
+
+        .t-container tbody .row1 td:nth-child(2) .mainimgs,
+        td:nth-child(3) .mainimgs {
+            position: initial;
+        }
+    }
+
+    /* Mobile screen large */
+
+    @media screen and (max-width:430px) {
+
+        /* conatiner   */
+        .t-container {
+            width: 90%;
+        }
+
+        /* table */
+        .t-container table th,
+        td {
+            padding: 15px 20px;
+        }
+
+        .t-container thead th {
+            padding: 0;
+        }
+
+        /* thead */
+        .t-container thead th:nth-child(2) img {
+            width: 120px;
+            height: 40px;
+        }
+
+        .t-container thead th:nth-child(3) h3 {
+            font-size: 18px;
+        }
+
+        .t-container tbody .row1 td:nth-child(2) .mainimgs,
+        td:nth-child(3) .mainimgs {
+            width: 120px;
+            height: 120px;
+        }
+
+        /* tbody */
+
+        .t-container table tbody td {
+            font-size: 15px;
+        }
+
+
+        .t-container tbody .row1 td:nth-child(1) p {
+            font-size: 14px;
+            width: 100%;
+            line-height: 16px;
+            padding-bottom: 20px;
+        }
+
+        .t-container tbody td i {
+            font-size: 1.4rem;
+        }
+    }
+
+    /* Mobile Screen small */
+
+    @media screen and (max-width:320px) {
+
+        /* thead */
+        .t-container thead th:nth-child(1) .imgcanvas img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .t-container thead th:nth-child(1) h2 {
+            font-size: 1.2rem;
+            flex-basis: 80%;
+        }
+
+        .t-container thead th:nth-child(2) img {
+            width: 100px;
+            height: 35px;
+        }
+
+        .t-container thead th:nth-child(3) h3 {
+            font-size: 1rem;
+        }
+
+        /* tbody */
+        .t-container tbody .row1 td:nth-child(2) .mainimgs,
+        td:nth-child(3) .mainimgs {
+            width: 100px;
+            height: 100px;
+        }
+
+        .t-container table tbody td {
+            font-size: 14px;
+        }
+
+        .t-container tbody .row1 td:nth-child(1) p {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<body>
+
+    <section class="t-container">
+
+        <!-- Leinwand (Canvas) Table -->
+
+        <table class="t-leinwand">
+
+            <thead>
+                <tr>
+                    <th>
+                        <div class="imgcanvas">
+                            <img src="https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Canvas_Icon_9db82f58-9f92-4b74-865d-f388c5aa0dcb.png?v=1693410052"
+                                alt="canvas-image">
+                        </div>
+                        <h2>leinwand</h2>
+                    </th>
+                    <th>
+                        <img src="https://cdn.shopify.com/s/files/1/0078/9934/9110/files/ArtyRoom_Logo_ba7b45c2-9273-43ed-83de-103c1038f3b7.png?v=1641508273"
+                            alt="logo">
+                    </th>
+                    <th>
+                        <h3>andere anbieter</h3>
+                    </th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <!-- 1st row -->
+
+                <tr class="row1  canvastable">
+
+                    <td>
+                        <p>
+                            Eine Qualitätsleinwand sollte bestimmte Anforderungen erfüllen.
+                        </p>
+                    </td>
+
+                    <td>
+                        <div class="mainimgs"></div>
+                    </td>
+
+                    <td>
+                        <div class="mainimgs"></div>
+                    </td>
+
+                </tr>
+
+                <!-- 2nd row -->
+
+                <tr>
+                    <td>Feine Struktur</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 3rd row -->
+
+                <tr>
+                    <td>gute Leinwand Voraussetzung </td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 4th row -->
+
+                <tr>
+                    <td>Farbverteilung</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 5th row -->
+
+                <tr>
+                    <td>Reissfestigkeit</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 6th row -->
+
+                <tr>
+                    <td>Vorgrundierung</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 7th row -->
+
+                <tr>
+                    <td>Stoffleinwand</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 8th row -->
+
+                <tr>
+                    <td>Versand in Schutzhülle</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+        <!-- Farben (color) Table -->
+
+        <table class="t-farben">
+
+            <thead>
+                <tr>
+                    <th>
+                        <div class="imgcanvas">
+                            <img src="https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Color_Icon_8e212192-4b33-4d60-89cb-a05a58616dcb.png?v=1693410052"
+                                alt="color-image">
+                        </div>
+                        <h2>Farben</h2>
+                    </th>
+                    <th>
+                        <img src="https://cdn.shopify.com/s/files/1/0078/9934/9110/files/ArtyRoom_Logo_ba7b45c2-9273-43ed-83de-103c1038f3b7.png?v=1641508273"
+                            alt="logo">
+                    </th>
+                    <th>
+                        <h3>andere anbieter</h3>
+                    </th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <!-- 1st row -->
+
+                <tr class="row1  colortable">
+
+                    <td>
+                        <p>
+                            Wichtig ist eine ideale Farbverteilung mit starker Deckkraft und höchster Brillanz. </p>
+                    </td>
+
+                    <td>
+                        <div class="mainimgs"></div>
+                    </td>
+
+                    <td>
+                        <div class="mainimgs"></div>
+                    </td>
+
+                </tr>
+
+                <!-- 2nd row -->
+
+                <tr>
+                    <td>Ideale Farbverteilung mit hoher Deckkraft</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 3rd row -->
+
+                <tr>
+                    <td>Farbbrillanz</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 4th row -->
+
+                <tr>
+                    <td>Deckkraft</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 5th row -->
+
+                <tr>
+                    <td>Qualität</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 6th row -->
+
+                <tr>
+                    <td>Ausbleichschutz</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 7th row -->
+
+                <tr>
+                    <td>Stoffleinwand</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 8th row -->
+
+                <tr>
+                    <td>Acrylfarben</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+        <!-- Pinsel (brush) Table -->
+
+        <table class="t-pinsel">
+
+            <thead>
+                <tr>
+                    <th>
+                        <div class="imgcanvas">
+                            <img src="https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Brush_Icon_27a42fa4-50b5-4404-93c7-c9053fb77952.png?v=1693410052"
+                                alt="brush-image">
+                        </div>
+                        <h2>Pinsel</h2>
+                    </th>
+                    <th>
+                        <img src="https://cdn.shopify.com/s/files/1/0078/9934/9110/files/ArtyRoom_Logo_ba7b45c2-9273-43ed-83de-103c1038f3b7.png?v=1641508273"
+                            alt="logo">
+                    </th>
+                    <th>
+                        <h3>andere anbieter</h3>
+                    </th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <!-- 1st row -->
+
+                <tr class="row1  brushtable">
+
+                    <td>
+                        <p>
+                            Die Qualität der Pinsel ist entscheidend. </p>
+                    </td>
+
+                    <td>
+                        <div class="mainimgs"></div>
+                    </td>
+
+                    <td>
+                        <div class="mainimgs"></div>
+                    </td>
+
+                </tr>
+
+                <!-- 2nd row -->
+
+                <tr>
+                    <td>Umweltfreundlich</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 3rd row -->
+
+                <tr>
+                    <td>Beste Pinsel qualität </td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 4th row -->
+
+                <tr>
+                    <td>Antihaarungsborsten</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 5th row -->
+
+                <tr>
+                    <td>Elastisch</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 6th row -->
+
+                <tr>
+                    <td>Material</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 7th row -->
+
+                <tr>
+                    <td>Superfeine Spitze</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+                <!-- 8th row -->
+
+                <tr>
+                    <td>3 Grössen</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td> <i class="fa fa-xmark"></i></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+    </section>
+
+</body>
+
+</html>
