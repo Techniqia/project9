@@ -32,13 +32,11 @@
 
     /* Tables start */
 
-
     /* container */
     .t-container {
         width: 70%;
         margin: auto;
     }
-
 
     /* table */
     .t-container table {
@@ -126,11 +124,11 @@
 
     .t-container tbody .row1 td:nth-child(2) .mainimgs,
     td:nth-child(3) .mainimgs {
+        height: 180px;
+        max-width: 180px;
         position: relative;
         display: block;
-        max-width: 180px;
         margin: auto;
-        height: 180px;
         top: -70px;
         border-radius: 50%;
         background-size: cover;
@@ -152,42 +150,44 @@
         font-size: 1.6rem;
     }
 
-    .t-container tbody td .fa-check {
-        color: green;
+    .t-container tbody td .greencell {
+        color: #008000;
     }
 
-    .t-container tbody td .fa-xmark {
-        color: red;
+    .t-container tbody td .redcell {
+        color: #ff0000;
     }
 
     /* round circle images */
 
     .t-container tbody .canvastable td:nth-child(2) .mainimgs {
-        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Canva_Competitor.webp?v=1693405875);
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Artyroom_Canvas.webp?v=1693405875);
+
     }
 
     .t-container tbody .canvastable td:nth-child(3) .mainimgs {
-        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Artyroom_Canvas.webp?v=1693405875);
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Canva_Competitor.webp?v=1693405875);
     }
 
     .t-container tbody .colortable td:nth-child(2) .mainimgs {
-        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Colors_Competitors.webp?v=1693405874);
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Artyroom_Colors.webp?v=1693405875);
+
     }
 
     .t-container tbody .colortable td:nth-child(3) .mainimgs {
-        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Artyroom_Colors.webp?v=1693405875);
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Colors_Competitors.webp?v=1693405874);
     }
 
     .t-container tbody .brushtable td:nth-child(2) .mainimgs {
-        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Brushes_Competitor.webp?v=1693405875);
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Artyroom_Brushes.webp?v=1693405874);
+
     }
 
     .t-container tbody .brushtable td:nth-child(3) .mainimgs {
-        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Artyroom_Brushes.webp?v=1693405874);
+        background-image: url(https://cdn.shopify.com/s/files/1/0078/9934/9110/files/Brushes_Competitor.webp?v=1693405875);
     }
 
     /* Responsive Screens */
-/* Responsive Screens */
     @media screen and (max-width:3000px) and (min-width:1500px) {
         .t-container {
             width: 33%;
@@ -459,8 +459,7 @@
 
                     <td>
                         <p>
-                            Eine Qualitätsleinwand sollte bestimmte Anforderungen erfüllen.
-                        </p>
+                            Voraussetzung für eine gute Leinwand: </p>
                     </td>
 
                     <td>
@@ -476,59 +475,72 @@
                 <!-- 2nd row -->
 
                 <tr>
-                    <td>Feine Struktur</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Versand in Schutzhülle</td>
+                    <td><i class="fa fa-check   greencell"></i></td>
+                    <td> <i class="fa fa-xmark  redcell"></i></td>
                 </tr>
+
+
 
                 <!-- 3rd row -->
 
                 <tr>
-                    <td>gute Leinwand Voraussetzung </td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Stoffleinwand</td>
+                    <td><i class="fa fa-check   greencell"></i></td>
+                    <td><i class="fa fa-check   greencell"></i></td>
                 </tr>
+
 
                 <!-- 4th row -->
-
                 <tr>
-                    <td>Farbverteilung</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Feine Struktur</td>
+                    <td><i class="fa fa-check   greencell"></i></td>
+                    <td> <i class="fa fa-xmark  redcell"></i></td>
                 </tr>
+
+
 
                 <!-- 5th row -->
-
                 <tr>
-                    <td>Reissfestigkeit</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Farbverteilung</td>
+                    <td>
+                        <span class="greencell"><b>Optimal</b></span>
+                    </td>
+                    <td>
+                        <span class="redcell"> <b> Ungleichmassig </b></span>
+                    </td>
                 </tr>
+
+
 
                 <!-- 6th row -->
 
                 <tr>
-                    <td>Vorgrundierung</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Reissfestigkeit</td>
+                    <td>
+                        <span class="greencell"><b>Hoch</b></span>
+                    </td>
+                    <td>
+                        <span class="redcell"> <b> Niedrig </b></span>
+                    </td>
+
                 </tr>
+
+
 
                 <!-- 7th row -->
 
                 <tr>
-                    <td>Stoffleinwand</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Vorgrundierung</td>
+                    <td>
+                        <span class="greencell"><b>4-Fach</b></span>
+                    </td>
+                    <td>
+                        <span class="redcell"> <b> 1-Fach </b></span>
+                    </td>
+
                 </tr>
-
-                <!-- 8th row -->
-
-                <tr>
-                    <td>Versand in Schutzhülle</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
-                </tr>
-
+/
             </tbody>
 
         </table>
@@ -566,7 +578,7 @@
 
                     <td>
                         <p>
-                            Wichtig ist eine ideale Farbverteilung mit starker Deckkraft und höchster Brillanz. </p>
+                            Ideale Farbverteilung mit hoher Deckkraft </p>
                     </td>
 
                     <td>
@@ -582,57 +594,53 @@
                 <!-- 2nd row -->
 
                 <tr>
-                    <td>Ideale Farbverteilung mit hoher Deckkraft</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Acrylfarben</td>
+                    <td><i class="fa fa-check   greencell"></i></td>
+                    <td><i class="fa fa-check   greencell"></i></td>
                 </tr>
 
                 <!-- 3rd row -->
 
                 <tr>
-                    <td>Farbbrillanz</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Ausbleichschutz</td>
+                    <td><i class="fa fa-check   greencell"></i></td>
+                    <td> <i class="fa fa-xmark  redcell"></i></td>
                 </tr>
 
                 <!-- 4th row -->
 
                 <tr>
-                    <td>Deckkraft</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Farbbrillanz</td>
+                    <td>
+                        <span class="greencell"><b>Hoch</b></span>
+                    </td>
+                    <td>
+                        <span class="redcell"> <b> Gering </b></span>
+                    </td>
                 </tr>
 
                 <!-- 5th row -->
 
                 <tr>
-                    <td>Qualität</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Deckkraft</td>
+                    <td>
+                        <span class="greencell"><b>Hoch</b></span>
+                    </td>
+                    <td>
+                        <span class="redcell"> <b> Mittel</b></span>
+                    </td>
                 </tr>
 
                 <!-- 6th row -->
 
                 <tr>
-                    <td>Ausbleichschutz</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
-                </tr>
-
-                <!-- 7th row -->
-
-                <tr>
-                    <td>Stoffleinwand</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
-                </tr>
-
-                <!-- 8th row -->
-
-                <tr>
-                    <td>Acrylfarben</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Qualität</td>
+                    <td>
+                        <span class="greencell"><b>Kunstlerqualität</b></span>
+                    </td>
+                    <td>
+                        <span class="redcell"> <b> Standard </b></span>
+                    </td>
                 </tr>
 
             </tbody>
@@ -672,7 +680,7 @@
 
                     <td>
                         <p>
-                            Die Qualität der Pinsel ist entscheidend. </p>
+                            Qualität der Pinsel ist das A und O. </p>
                     </td>
 
                     <td>
@@ -686,60 +694,58 @@
                 </tr>
 
                 <!-- 2nd row -->
-
                 <tr>
-                    <td>Umweltfreundlich</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>3 Grössen</td>
+                    <td><i class="fa fa-check   greencell"></i></td>
+                    <td><i class="fa fa-check   greencell"></i></td>
                 </tr>
 
-                <!-- 3rd row -->
 
+
+                <!-- 3rd row -->
                 <tr>
-                    <td>Beste Pinsel qualität </td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Superfeine Spitze</td>
+                    <td><i class="fa fa-check   greencell"></i></td>
+                    <td> <i class="fa fa-xmark  redcell"></i></td>
                 </tr>
 
                 <!-- 4th row -->
 
                 <tr>
-                    <td>Antihaarungsborsten</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Umweltfreundlich</td>
+                    <td><i class="fa fa-check   greencell"></i></td>
+                    <td> <i class="fa fa-xmark  redcell"></i></td>
                 </tr>
 
                 <!-- 5th row -->
 
                 <tr>
-                    <td>Elastisch</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Antihaarungsborsten</td>
+                    <td><i class="fa fa-check   greencell"></i></td>
+                    <td> <i class="fa fa-xmark  redcell"></i></td>
                 </tr>
+
 
                 <!-- 6th row -->
 
                 <tr>
-                    <td>Material</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Elastisch</td>
+                    <td><i class="fa fa-check   greencell"></i></td>
+                    <td> <i class="fa fa-xmark  redcell"></i></td>
                 </tr>
 
                 <!-- 7th row -->
 
                 <tr>
-                    <td>Superfeine Spitze</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
+                    <td>Material</td>
+                    <td>
+                        <span class="greencell"><b>Hochwertig</b></span>
+                    </td>
+                    <td>
+                        <span class="redcell"> <b> Standard </b></span>
+                    </td>
                 </tr>
 
-                <!-- 8th row -->
-
-                <tr>
-                    <td>3 Grössen</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td> <i class="fa fa-xmark"></i></td>
-                </tr>
 
             </tbody>
 
